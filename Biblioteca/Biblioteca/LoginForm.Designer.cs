@@ -38,20 +38,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(333, 105);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(224, 85);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 25);
+            this.label1.Size = new System.Drawing.Size(125, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Logheaza-te";
             // 
             // btnAdmin
             // 
             this.btnAdmin.BackColor = System.Drawing.Color.Bisque;
-            this.btnAdmin.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmin.Location = new System.Drawing.Point(234, 231);
+            this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmin.Location = new System.Drawing.Point(141, 188);
+            this.btnAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(93, 55);
+            this.btnAdmin.Size = new System.Drawing.Size(90, 45);
             this.btnAdmin.TabIndex = 1;
             this.btnAdmin.Text = "Admin";
             this.btnAdmin.UseVisualStyleBackColor = false;
@@ -60,10 +62,11 @@
             // btnPersoana
             // 
             this.btnPersoana.BackColor = System.Drawing.Color.Bisque;
-            this.btnPersoana.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersoana.Location = new System.Drawing.Point(490, 230);
+            this.btnPersoana.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersoana.Location = new System.Drawing.Point(368, 187);
+            this.btnPersoana.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPersoana.Name = "btnPersoana";
-            this.btnPersoana.Size = new System.Drawing.Size(99, 56);
+            this.btnPersoana.Size = new System.Drawing.Size(74, 46);
             this.btnPersoana.TabIndex = 2;
             this.btnPersoana.Text = "Persoana";
             this.btnPersoana.UseVisualStyleBackColor = false;
@@ -71,10 +74,11 @@
             // btnPers
             // 
             this.btnPers.BackColor = System.Drawing.Color.Bisque;
-            this.btnPers.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPers.Location = new System.Drawing.Point(490, 230);
+            this.btnPers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPers.Location = new System.Drawing.Point(352, 187);
+            this.btnPers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPers.Name = "btnPers";
-            this.btnPers.Size = new System.Drawing.Size(99, 56);
+            this.btnPers.Size = new System.Drawing.Size(90, 46);
             this.btnPers.TabIndex = 3;
             this.btnPers.Text = "Persoana";
             this.btnPers.UseVisualStyleBackColor = false;
@@ -82,13 +86,14 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 430);
+            this.ClientSize = new System.Drawing.Size(587, 349);
             this.Controls.Add(this.btnPers);
             this.Controls.Add(this.btnPersoana);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

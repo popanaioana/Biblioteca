@@ -9,16 +9,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Configuration;
 
 namespace Biblioteca
 {
     public partial class AdminForm : Form
     {
-        private string conStr = @"Server=desktop-9avjt3l;Database=BibliotecaDB;Integrated Security=True";
+        private string conStr = ConfigurationManager.ConnectionStrings["BibliotecaDB"].ConnectionString;
         public AdminForm()
         {
             InitializeComponent();
             ViewBiblioteca();
+            ViewPersoane();
         }
 
         private void ViewBiblioteca()
@@ -35,6 +37,27 @@ namespace Biblioteca
                         DataTable dt = new DataTable();
                         dt.Load(dr);
                         dgvBiblioteca.DataSource = dt;
+                    }
+                }
+            }
+        }
+
+        private void ViewPersoane()
+        {
+            using (var con = new SqlConnection(conStr))
+            {
+                con.Open();
+
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandText = "SELECT * FROM Persoana";
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        DataTable dt = new DataTable();
+                        dt.Load(dr);
+                        dgvPersoane.DataSource = dt;
                     }
                 }
             }

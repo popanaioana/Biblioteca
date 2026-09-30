@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace Biblioteca
 {
@@ -17,7 +18,7 @@ namespace Biblioteca
         private string email, parola;
         private DateTime dataR;
         private Timer timer;
-        private string conStr = @"Server=desktop-9avjt3l;Database=BibliotecaDB;Integrated Security=True";
+        private string conStr = ConfigurationManager.ConnectionStrings["BibliotecaDB"].ConnectionString;
         public PersoanaForm(string email, string parola)
         {
             InitializeComponent();
