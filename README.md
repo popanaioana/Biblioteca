@@ -1,162 +1,118 @@
-# \# Biblioteca
+# Biblioteca 
 
-# 
+A desktop library management application developed in C# using Windows Forms and Microsoft SQL Server.
 
-# A desktop library management application developed in C# using Windows Forms and Microsoft SQL Server.
+The application provides separate interfaces for administrators and library users, allowing books, users, and borrowing operations to be managed through a graphical interface. 
 
-# 
+# Features 
 
-# The application provides separate interfaces for administrators and library users, allowing books, users, and borrowing operations to be managed through a graphical interface.
+Administrator
 
-# 
+\- View the library's book collection
 
-# \## Features
+\- Add new books
 
-# 
+\- Register new users
 
-# \### Administrator
+\- Assign books to users
 
-# \- View the library's book collection
+\- Process book returns
 
-# \- Add new books
+\- Track book availability and borrowing information 
 
-# \- Register new users
+User
 
-# \- Assign books to users
+\- Log in using registered credentials
 
-# \- Process book returns
+\- View currently borrowed book information
 
-# \- Track book availability and borrowing information
+\- Check book availability by title and author
 
-# 
+\- View the remaining time until a borrowed book must be returned
 
-# \### User
+# Technologies
 
-# \- Log in using registered credentials
+\- C#
 
-# \- View currently borrowed book information
+\- .NET Framework 4.7.2
 
-# \- Check book availability by title and author
+\- Windows Forms
 
-# \- View the remaining time until a borrowed book must be returned
+\- Microsoft SQL Server
 
-# 
+\- ADO.NET
 
-# \## Technologies
+\- SQL stored procedures
 
-# 
+\- Visual Studio 
 
-# \- C#
+#Database 
 
-# \- .NET Framework 4.7.2
+The application uses a SQL Server database named `BibliotecaDB`. 
 
-# \- Windows Forms
+The repository includes a `database.sql` script that creates the database structure, stored procedures, and sample data required to run the application.
 
-# \- Microsoft SQL Server
+The database stores information about:
 
-# \- ADO.NET
+\- Books
 
-# \- SQL stored procedures
+\- Library users
 
-# \- Visual Studio
+\- Book availability
 
-# 
+\- Borrowing and return dates 
 
-# \## Database
+# Database Setup
 
-# 
+1\. Open `database.sql` in SQL Server Management Studio.
 
-# The application uses a SQL Server database named `BibliotecaDB`.
+2\. Execute the script to create and populate `BibliotecaDB`.
 
-# 
+3\. Update the connection string in `App.config` if your SQL Server instance is different.
 
-# The repository includes a `database.sql` script that creates the database structure, stored procedures, and sample data required to run the application.
+ Example: 
 
-# 
+ ```xml
 
-# The database stores information about:
+ <connectionStrings>
 
-# 
+    <add name="BibliotecaDB"
 
-# \- Books
+         connectionString="Server=localhost\\SQLEXPRESS;Database=BibliotecaDB;Integrated Security=True;"
 
-# \- Library users
+         providerName="System.Data.SqlClient" />
 
-# \- Book availability
+ </connectionStrings>
 
-# \- Borrowing and return dates
+ ``` 
 
-# 
+# Running the Application
 
-# \## Database Setup
+1\. Clone the repository.
 
-# 
+2\. Set up the database using `database.sql`.
 
-# 1\. Open `database.sql` in SQL Server Management Studio.
+3\. Open the solution in Visual Studio.
 
-# 2\. Execute the script to create and populate `BibliotecaDB`.
+4\. Verify the database connection string in `App.config`.
 
-# 3\. Update the connection string in `App.config` if your SQL Server instance is different.
+5\. Build and run the application. 
 
-# 
+# Project Structure 
 
-# Example:
+\- `AdminForm` – manages books, users, borrowing, and returns
 
-# 
+\- `PersoanaForm` – displays user and borrowed-book information
 
-# ```xml
+\- `LoginForm` – provides access to the user and administrator login interfaces
 
-# <connectionStrings>
+\- `AdminFormLogin` – handles administrator authentication
 
-# &#x20;   <add name="BibliotecaDB"
+\- `PersoanaFormLogin` – handles user authentication
 
-# &#x20;        connectionString="Server=localhost\\SQLEXPRESS;Database=BibliotecaDB;Integrated Security=True;"
+\- `database.sql` – creates and populates the SQL Server database 
 
-# &#x20;        providerName="System.Data.SqlClient" />
+# Author
 
-# </connectionStrings>
-
-# ```
-
-# 
-
-# \## Running the Application
-
-# 
-
-# 1\. Clone the repository.
-
-# 2\. Set up the database using `database.sql`.
-
-# 3\. Open the solution in Visual Studio.
-
-# 4\. Verify the database connection string in `App.config`.
-
-# 5\. Build and run the application.
-
-# 
-
-# \## Project Structure
-
-# 
-
-# \- `AdminForm` – manages books, users, borrowing, and returns
-
-# \- `PersoanaForm` – displays user and borrowed-book information
-
-# \- `LoginForm` – provides access to the user and administrator login interfaces
-
-# \- `AdminFormLogin` – handles administrator authentication
-
-# \- `PersoanaFormLogin` – handles user authentication
-
-# \- `database.sql` – creates and populates the SQL Server database
-
-# 
-
-# \## Author
-
-# 
-
-# Ana Pop
+# Ana-Ioana Pop
 
